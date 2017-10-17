@@ -2,7 +2,7 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 const config = {
-  port: Number(process.env.PORT || 3000),
+  port: Number(process.env.PORT || 8080),
   host: process.env.HOST || 'localhost',
 };
 

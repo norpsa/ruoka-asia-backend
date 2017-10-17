@@ -8,9 +8,7 @@ server.connection({
   host: config.host,
   port: config.port,
   routes: {
-    cors: {
-      credentials: true,
-    },
+    cors: true,
   },
 });
 

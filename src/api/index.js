@@ -1,11 +1,16 @@
-const Game = require('./routes/game');
+const Category = require('./routes/category');
+const Recipe = require('./routes/recipe');
 
 exports.register = (plugin, options, next) => {
   plugin.route([
-    { method: 'GET', path: '/game', config: Game.getGames },
-    { method: 'GET', path: '/game/{id}', config: Game.getGameById },
-    { method: 'POST', path: '/game', config: Game.createGame },
-    { method: 'DELETE', path: '/game/{id}', config: Game.deleteGame },
+    { method: 'GET', path: '/category', config: Category.getCategories },
+    { method: 'GET', path: '/category/{id}', config: Category.getCategoryById },
+    { method: 'POST', path: '/category', config: Category.createCategory },
+    { method: 'DELETE', path: '/category/{id}', config: Category.deleteCategory },
+    { method: 'GET', path: '/recipe', config: Recipe.getRecipes },
+    { method: 'GET', path: '/recipe/{id}', config: Recipe.getRecipeById },
+    { method: 'POST', path: '/recipe', config: Recipe.createRecipe },
+    { method: 'DELETE', path: '/recipe/{id}', config: Recipe.deleteRecipe },
   ]);
 
   next();
