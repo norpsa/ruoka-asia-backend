@@ -40,6 +40,7 @@ module.exports.createCategory = {
   validate: {
     payload: {
       name: Joi.string().required(),
+      description: Joi.string().optional()
     },
   },
   handler(request, reply) {
@@ -51,7 +52,7 @@ module.exports.createCategory = {
     let newCategory = {name : name,
                     id 	: id, 
                     description : description};
-     games.push(newCategory);
+     categories.push(newCategory);
 
      return reply(newCategory);
   },
