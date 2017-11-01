@@ -40,6 +40,8 @@ module.exports.createRecipe = {
   validate: {
     payload: {
       name: Joi.string().required(),
+      url: Joi.string().optional(),
+      categoryId: Joi.number().required()
     },
   },
   handler(request, reply) {
